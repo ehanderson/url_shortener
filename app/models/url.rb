@@ -1,4 +1,5 @@
 class Url < ActiveRecord::Base
+validates :original_url, format: { with: /https*\:\/\/\w+\.\w+\.\w{2,5}/ }
 validates :shortened_url, uniqueness: true
 
 def self.shorten

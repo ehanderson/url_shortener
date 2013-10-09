@@ -11,11 +11,13 @@
     <tr>
       <th>Original URL</th>
       <th>Shortened URL</th>
+      <th>Counter</th>
     </tr>
     <% Url.all.each do |url| %>
     <tr>
     <th><%= url.original_url %></th>
-    <th><%= url.shortened_url %></th>
+    <th><a href='/<%= url.shortened_url %>'><%= url.shortened_url %></a></th>
+    <th><%= url.click_counter %></th>
     </tr>
     <% end %>
   </table>
