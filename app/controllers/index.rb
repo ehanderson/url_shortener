@@ -5,11 +5,11 @@ end
 
 post '/urls' do
   Url.create(original_url: params[:original_url], 
-          shortened_url: URL.shorten)
+          shortened_url: Url.shorten)
   redirect to '/'
 end
 
-# e.g., /q6bda
+
 get '/:short_url' do
-  # redirect to appropriate "long" URL
+  
 end

@@ -8,6 +8,16 @@
   </form>
 
   <table>
+    <tr>
+      <th>Original URL</th>
+      <th>Shortened URL</th>
+    </tr>
+    <% Url.all.each do |url| %>
+    <tr>
+    <th><%= url.original_url %></th>
+    <th><%= url.shortened_url %></th>
+    </tr>
+    <% end %>
   </table>
 </div>
 

@@ -1,11 +1,7 @@
-class Url #< ActiveRecord::Base
+class Url < ActiveRecord::Base
 validates :shortened_url, uniqueness: true
 
-###CREATE METHOD TO SHORTEN URLS
 def self.shorten
-  #7 letters
-  #Complosed numbers and letters
-  #Case
   possible_characters = []
   possible_characters << ('a'..'z').to_a
   possible_characters << ('A'..'Z').to_a
