@@ -4,7 +4,10 @@ get '/' do
 end
 
 post '/urls' do
-  # create a new Url
+  
+
+
+  redirect to '/'
 end
 
 # e.g., /q6bda
