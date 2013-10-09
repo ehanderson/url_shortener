@@ -4,9 +4,8 @@ get '/' do
 end
 
 post '/urls' do
-  
-
-
+  Url.create(original_url: params[:original_url], 
+          shortened_url: URL.shorten)
   redirect to '/'
 end
 
