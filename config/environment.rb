@@ -16,7 +16,7 @@ require 'active_record'
 require 'logger'
 
 require 'sinatra'
-require "sinatra/reloader" if URLment?
+require "sinatra/reloader" if development?
 
 require 'erb'
 
